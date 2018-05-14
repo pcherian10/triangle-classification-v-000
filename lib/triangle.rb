@@ -4,7 +4,7 @@ class Triangle
 
   def initialize (attributes)
     attributes.each {|key, value| self.send(("#{key}="), value)}
-    @dimension = []
+    @dimensions = []
     @dimensions << @length, @width, @height
   end
 
