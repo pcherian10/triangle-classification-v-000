@@ -11,7 +11,6 @@ class Triangle
 
   def kind
     side_sums = [@sides[0]+@sides[1], @sides[0]+@sides[2], @sides[1]+@sides[2]]
-    binding.pry
     invalid = nil
     @sides.each.with_index {|side, idx| invalid = true if side > side_sums[idx]}
     if invalid || @sides.any? {|side| side <= 0} # invalid cases.
