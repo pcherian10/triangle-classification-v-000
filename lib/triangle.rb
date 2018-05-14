@@ -10,9 +10,8 @@ class Triangle
   end
 
   def kind
-    side_sums = [@sides[0,1].sum, [@sides[0,2].sum, @sides[1,2].sum]
-    side_sums = side_sums.reverse
-    if (@sides.each.with_index {|side, idx| return true if side > side_sums[idx]}) || (@sides.any? {|side| side <= 0}) # invalid cases.
+    side_sums = [@sides[0,1].sum, [@sides[0,2].sum, @sides[1,2].sum].reverse
+    if @sides.each.with_index {|side, idx| return true if side > side_sums[idx]} || (@sides.any? {|side| side <= 0}) # invalid cases.
       begin
         raise TriangleError
       end
