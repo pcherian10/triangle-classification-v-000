@@ -12,7 +12,7 @@ class Triangle
    :scalene if @sides.uniq.length == 3
    :isosceles if @sides.uniq.length == 2
    :equilateral if @sides.uniq.length == 1
- end
+  end
 
 
 
