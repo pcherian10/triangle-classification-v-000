@@ -11,7 +11,7 @@ class Triangle
 
   def kind
     side_sums = [@sides[0,1].sum, [@sides[0,2].sum, @sides[1,2].sum]
-    if (@sides.any? {|side, idx| side > @sides(0,1)}) || (@sides.any? {|side| side <= 0}) # invalid cases.
+    if (@sides.each.with_index {|side, idx| ) || (@sides.any? {|side| side <= 0}) # invalid cases.
       begin
         raise TriangleError
       end
