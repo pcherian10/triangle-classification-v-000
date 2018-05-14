@@ -19,10 +19,10 @@ class Triangle
       end
       i +=1
     end
-    
+
     result = result.reverse #[(1,2), (0,2), (0,1)]
     if (@sides.each.with_index {|side, idx| return false if side > result[idx]}) || (@sides.any? {|side| side <= 0})
-      begin 
+      begin
         raise TriangleError
       rescue
 
