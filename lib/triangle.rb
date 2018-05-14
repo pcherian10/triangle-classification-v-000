@@ -9,9 +9,8 @@ class Triangle
   end
 
   def kind
-    @sides.each do |side|
-
-    end
+    while(i < @sides.length)
+      @sides[i] + @sides[i+1] 
   end
 
 
