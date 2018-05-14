@@ -1,17 +1,19 @@
 class Triangle
 
-  attr_accessor :length, :width, :height, :equilateral, :isosceles, :scalene, :dimensions
+  attr_accessor :equilateral, :isosceles, :scalene, :sides
 
-  def initialize (attributes)
-    attributes.each {|key, value| self.send(("#{key}="), value)}
-    @dimensions = []
-    @dimensions << @length, @width, @height
-  end
+  def initialize (side_1, side_2, side_3)
+    @sides = []
+    @sides << side_1, side2, side_3
+    
+    
+
 
   def kind
-    :equilateral if @dimensions.all? {|side| side == @length}
-    :isosceles if @dimensions.each {|side|}
-
+    :equilateral if @length == @width && @length == @height &&
+        
+      
+    
   end
 end
 
