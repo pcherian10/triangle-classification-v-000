@@ -9,9 +9,13 @@ class Triangle
   end
 
   def kind
-   :scalene if @sides.uniq.length == 3
-   :isosceles if @sides.uniq.length == 2
-   :equilateral if @sides.uniq.length == 1
+   if @sides.each {|side,idx
+
+
+   else
+     :scalene if @sides.uniq.length == 3
+     :isosceles if @sides.uniq.length == 2
+     :equilateral if @sides.uniq.length == 1
   end
 
 
