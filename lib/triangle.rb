@@ -10,7 +10,7 @@ class Triangle
   end
 
   def kind
-    side_sums = [@sides[0,1].sum, @sides[0,2].sum, @sides[1,2].sum]
+    side_sums = [@sides[0]+@sides[1], @sides[0]+@sides[2], @sides[1]+@sides[2]]
     binding.pry
     invalid = nil
     @sides.each.with_index {|side, idx| invalid = true if side > side_sums[idx]}
