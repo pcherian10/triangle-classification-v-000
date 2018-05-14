@@ -12,9 +12,9 @@ class Triangle
     result = []
     i = 0
     while(i < 1)
-      j = 1
-      while(j < @sides.length)
-        result << ()@sides[i] + @sides[j])
+      j = i + 1
+      while(j < @sides.length - 1)
+        result << (@sides[i] + @sides[j])
         j += 1
       end
       i +=1
