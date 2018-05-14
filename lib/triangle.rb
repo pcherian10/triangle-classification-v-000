@@ -20,14 +20,7 @@ class Triangle
       i +=1
     end
     result = result.reverse
-    (0,1, 0,2, 1,2).reverse ==> (1,2 , 0,2, 0,1)
-    so if 2 is less than result [2], then invalid
-    so if 1 is less than result [1], then invalid
-    so if 0 is less than result [0], then invalid
-    @sides.
-
-
-
+    if @sides.each.with_index {|side, idx| return false if side > result[idx]}
 
   end
 end
