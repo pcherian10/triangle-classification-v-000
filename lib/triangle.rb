@@ -10,7 +10,8 @@ class Triangle
 
   def kind
     while(i < @sides.length)
-      @sides[i] + @sides[i+1] 
+      @sides[i] + @sides[i+1]
+      @
   end
 
 
