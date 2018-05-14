@@ -7,7 +7,10 @@ class Triangle
     @sides << side_1, side2, side_3
 
   def kind
-    :equilateral if @sides.all? {|side| side == side[0] }
+   :scalene if @sides.uniq.length == 3
+   :isosceles if @sides.uniq.length == 2
+   :equilateral if @sides.uniq.length == 1
+     
 
 
 
