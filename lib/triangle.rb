@@ -1,4 +1,4 @@
-require '.pry'
+require 'pry'
 class Triangle
 
   attr_accessor :equilateral, :isosceles, :scalene, :sides
