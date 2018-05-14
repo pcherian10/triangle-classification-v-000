@@ -6,7 +6,7 @@ class Triangle
   def initialize (side_1, side_2, side_3)
     @sides = []
     @sides << [side_1, side_2, side_3]
-    @sides.flatten
+    @sides = @sides.flatten
   end
 
   def kind
