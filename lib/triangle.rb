@@ -10,7 +10,7 @@ class Triangle
 
   def kind
     :equilateral if @dimensions.all? {|side| side == @length}
-    :isosceles if @dimensions.each
+    :isosceles if @dimensions.each {|side|}
 
   end
 end
