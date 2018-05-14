@@ -20,8 +20,8 @@ class Triangle
       i +=1
     end
     result = result.reverse
-    if (@sides.each.with_index {|side, idx| return false if side > result[idx]}) || (@sides.any? {|side| side <=0})
-
+    if !(@sides.each.with_index {|side, idx| return false if side > result[idx]}) || (@sides.any? {|side| side <= 0})
+      begin
 
 
 
