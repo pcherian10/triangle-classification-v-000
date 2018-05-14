@@ -25,11 +25,11 @@ class Triangle
       begin
         raise TriangleError
       end
-    end
     else
-
-
-
+      :equilateral if @sides.uniq.length == 1
+      :isosceles if @sides.uniq.length == 2
+      :scalene if @sides.uniq.length == 3
+    end
   end
 
   class TriangleError < StandardError
