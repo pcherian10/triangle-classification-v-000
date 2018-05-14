@@ -1,4 +1,4 @@
-require 'pry'
+require '.pry'
 class Triangle
 
   attr_accessor :equilateral, :isosceles, :scalene, :sides
@@ -22,7 +22,7 @@ class Triangle
     end
 
     result = result.reverse #[(1,2), (0,2), (0,1)]
-
+    binding.pry
     if (@sides.each.with_index {|side, idx| return false if side > result[idx].to_i}) || (@sides.any? {|side| side <= 0}) # invalid cases.
       begin
         raise TriangleError
