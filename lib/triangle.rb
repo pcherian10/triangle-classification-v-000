@@ -11,9 +11,9 @@ class Triangle
   def kind
     result = []
     i = 0
-    while(i < 1)
+    while(i <= 1)
       j = i + 1
-      while(j < @sides.length - 1)
+      while(j < @sides.length)
         result << (@sides[i] + @sides[j])
         j += 1
       end
