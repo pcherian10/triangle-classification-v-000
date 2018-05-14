@@ -10,19 +10,8 @@ class Triangle
   end
 
   def kind
-    result = []
-    i = 0
-    while(i <= 1)
-      j = i + 1
-      while(j < @sides.length)
-        result << (@sides[i] + @sides[j]) #[(0,1), (0,2), (1,2)]
-        j += 1
-      end
-      i +=1
-    end
-
-    result = result.reverse #[(1,2), (0,2), (0,1)]
-    if (@sides.any? {|side, idx| side > result[0..-1]}) || (@sides.any? {|side| side <= 0}) # invalid cases.
+    side_sums = [@sides[0,1].sum, [@sides[0,2].sum, @sides[1,2].sum]
+    if (@sides.any? {|side, idx| side > @sides(0,1)}) || (@sides.any? {|side| side <= 0}) # invalid cases.
       begin
         raise TriangleError
       end
